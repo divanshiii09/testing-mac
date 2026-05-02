@@ -35,10 +35,16 @@ class student{
 };
 
 int main(){
+    // static memory allocation
     student s1(513, "Divanshi Goyal",20);
     student s2(s1);
     cout<< s2.name<<endl;
     s1.study();
+
+    // dynamic memory allocation
+    student *s3= new student(510, "Dilnaz", 21);
+    cout<<s3->name<<endl;
+    delete s3;
     
     return 0;
 }
